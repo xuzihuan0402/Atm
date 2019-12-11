@@ -14,6 +14,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_LOGIN = 110;
     boolean logon = false;
@@ -30,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                card.setValue(51);
+                Random random= new Random();
+                card.setValue(random.nextInt(51));
             }
         });
 
