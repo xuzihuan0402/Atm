@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_LOGIN = 110;
     boolean logon = false;
     private PokerCard card;
+    Random random= new Random();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Random random= new Random();
-                card.setValue(random.nextInt(51));
+                card.setValue(random.nextInt(52));
             }
         });
 
